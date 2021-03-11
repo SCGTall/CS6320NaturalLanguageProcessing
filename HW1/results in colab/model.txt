@@ -1,0 +1,16 @@
+1L
+model.add(keras.layers.Dense(vocab_size, activation=tf.nn.softmax))
+
+2L
+#model.add(keras.layers.Dense(16, activation=tf.nn.relu))
+model.add(keras.layers.Dense(vocab_size, activation=tf.nn.softmax))
+
+3La
+model.add(keras.layers.Dense(16, activation=tf.nn.relu))
+model.add(keras.layers.Dense(1024, activation=tf.nn.relu))
+model.add(keras.layers.Dense(vocab_size, activation=tf.nn.softmax))
+
+3Lb
+model.add(keras.layers.Dense(16, activation=tf.nn.relu))
+model.add(keras.layers.Dense(128, activation=tf.nn.relu))
+model.add(keras.layers.Dense(vocab_size, activation=tf.nn.softmax))
