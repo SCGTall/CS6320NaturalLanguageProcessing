@@ -1,0 +1,58 @@
+S	NP	INF-VP												
+NP	NNS	PP												
+PP	IN	NP												
+NP	DT	NN												
+INF-VP	TO	VP												
+VP	VB	PP												
+PP	IN	NN												
+S	NP	VP												
+NP	DT	AP												
+AP	JJ	NNS												
+CCNNS	CC	NNS												
+NNS	NNS	CCNNS												
+VP	VB	NN												
+VP	VBD	INF-VP												
+S	AP	VP												
+VP	VP	PP												
+PP	IN	S												
+CCS	CC	S												
+S	S	CCS												
+NP	NN	Nom												
+VP	VBD	JJ												
+VP	VBP	PP												
+VP	VBZ	PP												
+NP	NN	NN												
+CCVP	CC	VP												
+VP	VP	CCVP												
+S	NNP	VP												
+NP	NP	PP												
+VP	VBZ	NP												
+MDRB	MD	RB												
+VP	MDRB	VP												
+VP	VP	NP												
+JJ	JJ	JJ												
+NP	JJ	AP												
+NNLS	NN	LS												
+PP	IN	NNLS												
+Nom	NN	NNS												
+Nom	NN	Nom												
+CDNom	CD	Nom												
+NP	DT	CDNom												
+AP	JJ	NN												
+VP	VB	NP												
+NNS	sales	products	services	worries	championships									
+IN	of	to	as	through	in	at	on							
+DT	the	a												
+NN	company	normalcy	revenue	recession	month	figure	skater	jump	competition	world	skating	day	medal	indicator
+TO	to													
+VB	return	increase	clinch											
+JJ	new	red	economical	historic	quadruple	senior	international	silver						
+CC	and	but												
+VBD	contributed	flashed												
+NP	Dow													
+VBZ	falls	lands												
+VBP	continue													
+CD	2019													
+LS	3													
+MD	could													
+RB	only													

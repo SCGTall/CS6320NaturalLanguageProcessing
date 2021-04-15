@@ -1,0 +1,50 @@
+{
+  "1": {
+    "title": "mRNA alters DNA",
+    "text": "RNA alters a person's DNA when taking the COVID-19 vaccine.",
+    "alternate_text": "RNA alters a person's DNA when taking the coronavirus vaccine.",
+    "source": "https://en.wikipedia.org/wiki/Misinformation_related_to_the_COVID-19_pandemic#Vaccine_misinformation"
+  },
+  "2": {
+    "title": "Infertility",
+    "text": "The COVID-19 vaccine causes infertility or miscarriages in women.",
+    "alternate_text": "The coronavirus vaccine causes infertility or miscarriages in women.",
+    "source": "https://en.wikipedia.org/wiki/Misinformation_related_to_the_COVID-19_pandemic#Vaccine_misinformation"
+  },
+  "3": {
+    "title": "Natural immunity",
+    "text": "Natural COVID-19 immunity is better than immunity derived from a COVID-19 vaccine.",
+    "alternate_text": "Natural immunity is better than immunity derived from a coronavirus vaccine.",
+    "source": "https://health.ucdavis.edu/health-news/newsroom/the-real-facts-about-common-covid-19-vaccine-myths/2020/12"
+  },
+  "4": {
+    "title": "Bell's palsy",
+    "text": "The COVID-19 vaccine causes Bell's palsy.",
+    "alternate_text": "The coronavirus vaccine causes Bell's palsy.",
+    "source": "https://en.wikipedia.org/wiki/Misinformation_related_to_the_COVID-19_pandemic#Vaccine_misinformation"
+  },
+  "7": {
+    "title": "Aborted fetus material",
+    "text": "The COVID-19 vaccine contains tissue from aborted fetuses.",
+    "alternate_text": "The coronavirus vaccine contains tissue from aborted fetuses.",
+    "source": "https://en.wikipedia.org/wiki/Misinformation_related_to_the_COVID-19_pandemic#Vaccine_misinformation"
+  },
+  "8": {
+    "title": "Microchip tracking",
+    "text": "The COVID-19 vaccine was developed to control the general population either through microchip tracking or nanotransducers in our brains.",
+    "alternate_text": "The coronavirus vaccine was developed to control the general population either through microchip tracking or nanotransducers in our brains.",
+    "source": "https://www.mayoclinichealthsystem.org/hometown-health/featured-topic/covid-19-vaccine-myths-debunked"
+  },
+  "9": {
+    "title": "Deadlier than COVID-19",
+    "text": "More people will die as a result of a negative side effect to the COVID-19 vaccine than would actually die from the coronavirus.",
+    "alternate_text": "More people will die as a result of a negative side effect to the coronavirus vaccine than would actually die from the virus.",
+    "source": "https://www.mayoclinichealthsystem.org/hometown-health/featured-topic/covid-19-vaccine-myths-debunked"
+  },
+  "10": {
+    "title": "Side effects",
+    "text": "There are severe side effects of the COVID-19 vaccines, worse than having the virus.",
+    "alternate_text": "There are severe side effects of the coronavirus vaccines, worse than having the virus.",
+    "source": "https://www.mayoclinichealthsystem.org/hometown-health/featured-topic/covid-19-vaccine-myths-debunked"
+  }
+}

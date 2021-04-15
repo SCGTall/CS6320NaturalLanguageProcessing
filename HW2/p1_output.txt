@@ -1,0 +1,32 @@
+--S1--
+# Sentence
+Sales of the company to return to normalcy
+# Bracketed structure parses
+[NP Sales] [PP of] [NP the company] [INF-VP to] [VP return] [PP to normalcy]
+# Num of parses
+2
+
+--S2--
+# Sentence
+The new products and services contributed to increase revenue
+# Bracketed structure parses
+[NP The] [AP new products] [CC and] [AP services] [VP contributed] [INF-VP to] [VP increase revenue]
+# Num of parses
+1
+
+--S3--
+# Sentence
+Dow falls as recession indicator flashed red and economical worries continue through the month
+# Bracketed structure parses
+[NP Dow] [VP falls] [PP as] [NP recession indicator] [VP flashed red] [CC and] [AP economical worries] [VP continue] [PP through] [NP the month]
+# Num of parses
+2
+
+--S4--
+# Sentence
+Figure skater lands historic quadruple jump in senior international competition at the 2019 World Figure Skating Championships on Day 3 but could only clinch a silver medal
+# Bracketed structure parses
+[NP Figure skater] [VP lands] [NP historic] [AP quadruple jump] [PP in] [NP senior] [AP international competition] [PP at] [NP the 2019 World Figure Skating Championships] [PP on Day 3] [CC but] [VP could only clinch] [NP a] [AP silver medal]
+# Num of parses
+196
+
