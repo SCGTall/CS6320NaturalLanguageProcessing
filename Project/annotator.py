@@ -99,13 +99,17 @@ def compare_func(a: tuple, b: tuple):
 def label_candidates(misinfos: dict, tweets: dict, labels: dict, candidates: list, use_filter: bool):
     sorted = candidates.copy()
     sorted.sort(key=lambda x: x[1])
-    for (i, v) in enumerate(sorted):
-        print("Candidate #" + str(i))
+    i = 0
+    last = 0
+    while (i < len(sorted)):
+        v = sorted[i]
         (id, mid) = v
         label_exist = (id in labels.keys() and mid in labels[id].keys())
         if use_filter and label_exist:
+            i += 1
             continue
 
+        print("Candidate #" + str(i + 1))
         m = misinfos[mid]
         tt = tweets[id]
         dic = {
@@ -117,27 +121,40 @@ def label_candidates(misinfos: dict, tweets: dict, labels: dict, candidates: lis
             "m_label": labels[id][mid]["m_label"] if label_exist else "?"
         }
         print_dictionary(dic)
-        print('1 ->   "agree";        2 ->        "disagree";')
-        print('3 ->   "no_stance";    4 ->        "not_relevant";')
-        print('0 ->   Skip this;      "return" -> Return to main menu.')
+        print('1 ->        "agree";              2 ->       "disagree";')
+        print('3 ->        "no_stance";          4 ->       "not_relevant";')
+        print("0 ->        Skip this;            -1 ->       Roll back;")
+        print('"save" ->   Save changes to disk.')
+        print('"return" -> Return to main menu.')
         print("Annotate:")
-        cmd = input()
-        if cmd == "return":
-            break
-        elif cmd == "0":
-            continue
-        else:
-            if id not in labels.keys():
-                labels[id] = {}
-            labels[id][mid] = {"tweet_id": id, "m_id": mid, "m_text": annotates[cmd]}
-            print("Annotate as: " + annotates[cmd] + "\n")
+        while True:
+            cmd = input()
+            if cmd == "return":
+                return
+            elif cmd == "save":
+                save_train_labels(labels, candidates)
+            elif cmd == "0":
+                last = i
+                i += 1
+                break
+            elif cmd == "-1":
+                i = last
+                break
+            elif "1" <= cmd <= "4":
+                if id not in labels.keys():
+                    labels[id] = {}
+                labels[id][mid] = {"tweet_id": id, "m_id": mid, "m_label": annotates[cmd]}
+                print("Annotate as: " + annotates[cmd] + "\n")
+                last = i
+                i += 1
+                break
 
 
 def check_example_labels(misinfos: dict, tweets: dict, labels: dict, candidates: list):
     sorted = candidates.copy()
     sorted.sort(key=lambda x: x[1])
     for (i, v) in enumerate(sorted):
-        print("Example #" + str(i))
+        print("Example #" + str(i+1))
         (id, mid) = v
         m = misinfos[mid]
         tt = tweets[id]
@@ -164,7 +181,7 @@ def print_dictionary(dic: dict):
         s = '    "' + key + '": '
         splited = ('"' + value + '",').split()
         for word in splited:
-            if (len(s) + len(word)) > 120:
+            if (len(s) + len(word)) > 80:
                 print(s)
                 s = "        " + word
             else:
@@ -180,14 +197,19 @@ def save_or_not(labels: dict, candidates: list):
         if cmd == "n":
             print("Give up all changes.")
             break
-        if cmd != "y":
-            continue
-        # write back results to train_labels.json
-        with open(FOLDER_PREFIX + TRAIN_LABELS, mode='x', encoding='utf-8') as f:
-            for (id, mid) in candidates:
-                line = json.dumps(labels[id][mid]) + "\n"
+        elif cmd == "y":
+            # write back results to train_labels.json
+            save_train_labels(labels, candidates)
+            break
+
+
+def save_train_labels(_labels: dict, _candidates: list):
+    with open(FOLDER_PREFIX + TRAIN_LABELS, mode='w', encoding='utf-8') as f:
+        for (id, mid) in _candidates:
+            if (id in _labels.keys() and mid in _labels[id].keys()):
+                line = json.dumps(_labels[id][mid]) + "\n"
                 f.write(line)
-        print("Save all changes.")
+    print("Save all changes.")
 
 
 def main(m_dict, t_dict, l_dict, c_list, el_dict, ec_list):
@@ -204,13 +226,14 @@ def main(m_dict, t_dict, l_dict, c_list, el_dict, ec_list):
         elif cmd == "1":
             print("1 -> Label all candidates.")
             label_candidates(m_dict, t_dict, l_dict, c_list, False)
+            save_or_not(l_dict, c_list)
         elif cmd == "2":
             print("2 -> Label all unlabeled candidates.")
             label_candidates(m_dict, t_dict, l_dict, c_list, True)
+            save_or_not(l_dict, c_list)
         elif cmd == "3":
             print("3 -> Check given example train labels.")
             check_example_labels(m_dict, t_dict, el_dict, ec_list)
-    save_or_not(l_dict, c_list)
 
 
 # main
