@@ -2,7 +2,7 @@
 import json
 import sys
 
-FOLDER_PREFIX = "data/"
+FOLDER_PREFIX = "phaseA/"
 MISINFORMATION_TARGETS = "misinformation_targets.json"
 misinformation_targets = {}  # misinformation targets
 TRAIN_CANDIDATES = "X1_train_candidates.json"

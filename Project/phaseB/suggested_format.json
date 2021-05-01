@@ -1,0 +1,27 @@
+[
+    {
+        "id":"1344053526951985152",
+        "sentiment":"positive",
+        "sentiment":1
+    },
+    {
+        "id":"1340150211423952896",
+        "sentiment":"positive",
+        "sentiment":1
+    },
+    {
+        "id":"1340070783536812034",
+        "sentiment":"positive",
+        "sentiment":1
+    },
+    {
+        "id":"1343310998485094400",
+        "sentiment":"negative",
+        "sentiment":0
+    },
+    {
+        "id":"1343303464697270273",
+        "sentiment":"negative",
+        "sentiment":0
+    }
+]
