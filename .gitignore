@@ -1,5 +1,6 @@
 # ignore the saved models for hw2
 *.pt
+*.model
 
 # ignore venv
 */venv
